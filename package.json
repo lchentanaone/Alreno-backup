@@ -14,7 +14,8 @@
     "appcenter-analytics": "4.4.5",
     "appcenter-crashes": "4.4.5",
     "react": "18.0.0",
-    "react-native": "0.69.5"
+    "react-native": "0.69.5",
+    "react-native-code-push": "^7.0.5"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
