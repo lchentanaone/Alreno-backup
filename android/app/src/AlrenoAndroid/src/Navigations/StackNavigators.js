@@ -11,7 +11,7 @@ import HomeHeader from '../Components/HomeHeader';
 import Profile from '../Components/Profile';
 import EditProfile from '../Components/EditProfile';
 import WifiSave from '../Components/WifiSave';
-import underContruction from '../Components/underContruction';
+import UnderContruction from '../Components/UnderContruction';
 // import Products from "../Components/Products";
 // import Transaction from "../Components/Transaction";
 
@@ -52,7 +52,7 @@ const StackNavigators = () => {
         <Stack.Screen name="Profile" component={Profile} />
         <Stack.Screen name="Edit your Profile" component={EditProfile} />
         <Stack.Screen name="Wi-Fi" component={WifiSave} />
-        <Stack.Screen name="Coming Soon" component={underContruction} />
+        <Stack.Screen name="Coming Soon" component={UnderContruction} />
 
         {/* 
 

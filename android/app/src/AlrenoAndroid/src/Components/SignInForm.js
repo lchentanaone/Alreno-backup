@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {formStyles} from './../Styling/FormStyle';
 import alrenoLogo from './../../assets/Alreno-sticker-black.png';
 import {sendPasswordResetEmail} from 'firebase/auth';
-import {auth} from '../../../../../../firebase';
+import {auth} from '../../../../../../firebase/firebase';
 import {
   View,
   Text,
@@ -15,8 +15,8 @@ import {
 } from 'react-native';
 
 const SignInForm = ({navigation}) => {
-  const [email, setEmail] = useState('alreno@gmail.com');
-  const [password, setPassword] = useState('alreno2022');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const user = auth.currentUser;
 
   useEffect(async () => {

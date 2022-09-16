@@ -2,8 +2,8 @@ import React, {useState, useEffect} from 'react';
 import {formStyles} from './../Styling/FormStyle';
 import {View, Text, SafeAreaView, TouchableOpacity} from 'react-native';
 import {OutlinedTextField} from 'rn-material-ui-textfield';
-import {auth, db} from '../../../../../../firebase';
-
+import {auth, db} from '../../../../../../firebase/firebase';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 const CreateForm = ({navigation}) => {
   const [firstname, setFirsname] = useState('');
   const [lastname, setLastname] = useState('');

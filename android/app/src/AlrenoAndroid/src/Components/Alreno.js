@@ -9,9 +9,9 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import {styles} from '../Styling/Styles';
-import LPG from '../../assets/LPG.png';
+import LPG from '../../assets/LPG.jpg';
 import LpgTank from '../../assets/LpgTank.png';
-import {auth} from '../../../../../../firebase';
+import {auth} from '../../../../../../firebase/firebase';
 import {useNavigation} from '@react-navigation/native';
 
 export default function Alreno() {
@@ -24,7 +24,7 @@ export default function Alreno() {
     const unsubscribe = auth.onAuthStateChanged(user => {
       if (isMounted) {
         if (user) {
-          // navigation.navigate('Home');
+          navigation.navigate('Home');
         }
       }
     });

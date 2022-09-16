@@ -2,16 +2,15 @@ import {StyleSheet} from 'react-native';
 
 export const styles = StyleSheet.create({
   // profile Button icons
-  icons: {
+  ProfileButtomicons: {
     flexDirection: 'row',
     justifyContent: 'space-around',
     marginTop: 90,
   },
   homeHeader: {
-    width: 400,
+    width: '100%',
     height: 50,
     backgroundColor: 'white',
-    marginTop: 30,
     alignItems: 'center',
     shadowColor: '#000',
     shadowOffset: {
@@ -26,6 +25,8 @@ export const styles = StyleSheet.create({
     marginTop: 10,
     fontSize: 25,
     fontWeight: 'bold',
+    color: 'black',
+    alignItems: 'center',
   },
   homeIcon: {
     width: 70,
@@ -49,7 +50,7 @@ export const styles = StyleSheet.create({
   //Logout
   logout: {
     alignItems: 'center',
-    marginTop: 100,
+    marginTop: 40,
   },
   logoutText: {
     color: '#878787',
@@ -59,17 +60,16 @@ export const styles = StyleSheet.create({
   profileContainer: {
     backgroundColor: '#f5f5f5',
     flex: 1,
-    paddingTop: 30,
   },
 
   image: {
     flex: 1,
     justifyContent: 'center',
-    marginTop: 100,
+    marginTop: 10,
   },
   name: {
     color: 'black',
-    marginTop: 80,
+    marginTop: 15,
     textAlign: 'center',
     fontSize: 40,
   },
@@ -241,7 +241,7 @@ export const styles = StyleSheet.create({
   },
   homeHeaderContainer: {
     backgroundColor: '#f5f5f5',
-    paddingVertical: 20,
+    paddingVertical: 15,
     paddingHorizontal: 20,
   },
 
@@ -364,7 +364,7 @@ export const styles = StyleSheet.create({
     borderRadius: 22,
     marginTop: 15,
   },
-  buttomIcons: {
+  HomebuttomIcons: {
     flexDirection: 'row',
     justifyContent: 'space-around',
     marginBottom: 20,

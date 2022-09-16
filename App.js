@@ -23,7 +23,6 @@ const App = () => {
       <NavigationContainer>
         <StackNavigators />
       </NavigationContainer>
-      {/* <Text>Hello</Text> */}
     </>
   );
 };

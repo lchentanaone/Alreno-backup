@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import {formStyles} from '../Styling/FormStyle';
 import forgotPass from '../../assets/forgotPass.png';
-import {auth} from '../../../../../../firebase';
+import {auth} from '../../../../../../firebase/firebase';
 
 const RecoverPassword = () => {
   const [email, setEmail] = useState('');

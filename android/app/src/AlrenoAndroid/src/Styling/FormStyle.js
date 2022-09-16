@@ -2,10 +2,9 @@ import {StyleSheet} from 'react-native';
 
 export const formStyles = StyleSheet.create({
   SignInHeader: {
-    width: 400,
+    width: '100%',
     height: 50,
     backgroundColor: 'white',
-    marginTop: 20,
     alignItems: 'center',
     shadowColor: '#000',
     shadowOffset: {
@@ -105,7 +104,7 @@ export const formStyles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 15,
-    backgroundColor: '#007FFF',
+    backgroundColor: 'red',
   },
   SignIntextBtn: {
     fontSize: 17,
@@ -188,10 +187,10 @@ export const formStyles = StyleSheet.create({
   // ------------------ create form ---------------------------------
   createContainer: {
     backgroundColor: '#008b8b',
-    flex: 1,
+    width: '100%',
   },
   textContainer: {
-    marginTop: 90,
+    marginTop: 20,
   },
   FieldsContainer: {
     backgroundColor: '#fff',

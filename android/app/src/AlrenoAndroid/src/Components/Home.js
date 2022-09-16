@@ -12,8 +12,8 @@ import {styles} from './../Styling/Styles';
 
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import HomeHeader from './HomeHeader';
-import {initializeApp} from '../../../../../../firebase';
-import {auth, db} from '../../../../../../firebase';
+import {initializeApp} from '../../../../../../firebase/firebase';
+import {auth, db} from '../../../../../../firebase/firebase';
 import TankProgress from './TankProgress';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {getFirestore} from 'firebase/firestore';
@@ -22,6 +22,7 @@ export default function Home({navigation}) {
   const [weight, setWeight] = useState(0);
   const [percent, setPercent] = useState(100);
   const user = auth.currentUser.uid;
+
   const getData = async () => {
     initializeApp({
       apiKey: 'AIzaSyCaJDtx5bjZwGje1Um9F_DKHbv8rrNn61s',
@@ -123,7 +124,7 @@ export default function Home({navigation}) {
               <Text style={styles.optionText}>Apply for {'\n'}Distributor</Text>
             </TouchableOpacity>
           </View>
-          <View style={styles.buttomIcons}>
+          <View style={styles.HomebuttomIcons}>
             <TouchableOpacity style={styles.iconOpacity} onPress={() => 'Home'}>
               <AntDesign name="home" size={30} color="black" />
             </TouchableOpacity>

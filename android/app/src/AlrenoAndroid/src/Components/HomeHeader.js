@@ -1,10 +1,10 @@
 /* eslint-disable prettier/prettier */
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import {styles} from '../Styling/Styles';
 import {Avatar} from 'react-native-paper';
 import {useNavigation} from '@react-navigation/native';
 import {SafeAreaView, View, Text, TouchableOpacity} from 'react-native';
-import {db} from '../../../../../../firebase';
+import {db} from '../../../../../../firebase/firebase';
 import * as firebase from 'firebase';
 
 export default function HomeHeader() {
@@ -13,13 +13,13 @@ export default function HomeHeader() {
   const navigation = useNavigation();
 
   firebase.auth().onAuthStateChanged(currentUser => {
-    // console.log("astalabista: ", currentUser);
+    // console.log('astalabista: ', currentUser);
 
     if (currentUser) {
       const docRef = db.collection('user_info').doc(currentUser.uid);
       docRef.get().then(doc => {
-        console.log(docRef);
         const {firstname} = doc.data();
+        console.log(firstname);
         setFirsname(firstname);
       });
     } else {
@@ -47,7 +47,7 @@ export default function HomeHeader() {
             <View style={styles.userImageContainer}>
               <Avatar.Image
                 size={130}
-                source={require('./../../assets/prof.png')}
+                source={require('./../../assets/prof.jpg')}
               />
             </View>
           </View>
@@ -59,7 +59,7 @@ export default function HomeHeader() {
             </TouchableOpacity>
             <TouchableOpacity
               style={styles.overviewButton}
-              onPress={() => navigation.navigate('Under Construction')}>
+              onPress={() => navigation.navigate('Coming Soon')}>
               <Text style={styles.overviewText}>Transaction</Text>
             </TouchableOpacity>
           </View>

@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React, {useEffect, useState} from 'react';
 import {formStyles} from './../Styling/FormStyle';
 
@@ -5,7 +6,7 @@ import {formStyles} from './../Styling/FormStyle';
 import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import * as firebase from 'firebase';
-import {auth, db} from '../../../../../../firebase';
+import {auth, db} from '../../../../../../firebase/firebase';
 import EditProfBg from '../../assets/EditProfBg.png';
 import {OutlinedTextField} from 'rn-material-ui-textfield';
 import {Avatar} from 'react-native-paper';
@@ -20,7 +21,7 @@ import {
   Platform,
   TextInput,
 } from 'react-native';
-
+import AsyncStorage from '@react-native-async-storage/async-storage';
 const EditProfile = ({navigation}) => {
   const user = auth.currentUser.uid;
   const [firstname, setFirstname] = useState('');
@@ -39,7 +40,7 @@ const EditProfile = ({navigation}) => {
         lastname: lastname ? lastname : userDetails.lastname,
         address: address ? address : userDetails.address,
         mobileNumber: mobileNumber ? mobileNumber : userDetails.mobileNumber,
-        image: image ? image : userDetails.image,
+        // image: image ? image : userDetails.image,
       })
       .then(() => {
         console.log('Document successfully written!');
@@ -146,7 +147,7 @@ const EditProfile = ({navigation}) => {
             style={formStyles.profImage}
             marginLeft={150}
             size={100}
-            source={require('../../assets/prof.png')}
+            source={require('../../assets/prof.jpg')}
           />
           {/* <Image
             source={{ uri: image }}
@@ -180,14 +181,14 @@ const EditProfile = ({navigation}) => {
 
           <OutlinedTextField
             style={formStyles.createInputField}
-            label="Mobile Number"
-            keyboardType="numeric"
+            label="Address"
             placeholder={userDetails.address}
             onChangeText={text => setAddress(text)}
           />
           <OutlinedTextField
             style={formStyles.createInputField}
-            label="Address"
+            label="Mobile Number"
+            keyboardType="numeric"
             placeholder={userDetails.mobileNumber}
             onChangeText={text => setMobileNumber(text)}
           />

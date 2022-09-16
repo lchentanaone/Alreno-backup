@@ -1,4 +1,5 @@
-import React, {useEffect, useState} from 'react';
+/* eslint-disable prettier/prettier */
+import React, {useState} from 'react';
 import {Avatar} from 'react-native-paper';
 import {styles} from './../Styling/Styles';
 import AntDesign from 'react-native-vector-icons/AntDesign';
@@ -13,7 +14,7 @@ import {
   Switch,
   ScrollView,
 } from 'react-native';
-import {auth, db} from '../../../../../../firebase';
+import {auth, db} from '../../../../../../firebase/firebase';
 import {getStorage, ref, getDownloadURL} from 'firebase/storage';
 
 const Profile = ({navigation}) => {
@@ -23,7 +24,7 @@ const Profile = ({navigation}) => {
   const onToggleSwitch = () => setIsSwitchOn(!isSwitchOn);
   const [firstName, setFirsname] = useState('');
   const [lastname, setLastname] = useState('');
-  const user = auth.currentUser.uid;
+  // const user = auth.currentUser.uid;
 
   const handleLogout = () => {
     auth.signOut().then(() => {
@@ -56,18 +57,12 @@ const Profile = ({navigation}) => {
             style={styles.image}
             marginLeft={150}
             size={100}
-            source={require('../../assets/prof.png')}
+            source={require('../../assets/prof.jpg')}
           />
           <Text style={styles.name}>
             {firstName} {lastname}
           </Text>
-          <Text
-            style={styles.link}
-            onPress={() =>
-              Linking.openURL('https://www.google.com/account/about/')
-            }>
-            {auth.currentUser?.email}
-          </Text>
+          <Text style={styles.link}>{auth.currentUser?.email}</Text>
           <View style={styles.edit}>
             <TouchableOpacity
               style={styles.editProfileOpacity}
@@ -95,8 +90,7 @@ const Profile = ({navigation}) => {
               <View style={styles.invitePeople}>
                 <TouchableOpacity
                   style={styles.invite}
-                  // onPress={}
-                >
+                  onPress={() => navigation.navigate('Coming Soon')}>
                   <Text style={styles.inviteButton}>Invite People</Text>
                 </TouchableOpacity>
               </View>
@@ -107,7 +101,7 @@ const Profile = ({navigation}) => {
               <Text style={styles.logoutText}>Log out</Text>
             </TouchableOpacity>
           </View>
-          <View style={styles.icons}>
+          <View style={styles.ProfileButtomicons}>
             <TouchableOpacity style={styles.iconOpacity}>
               <AntDesign
                 name="home"

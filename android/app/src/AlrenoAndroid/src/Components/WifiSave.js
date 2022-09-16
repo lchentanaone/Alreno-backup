@@ -1,8 +1,9 @@
+/* eslint-disable prettier/prettier */
 import React, {useEffect, useState} from 'react';
 import {formStyles} from '../Styling/FormStyle';
 import {View, Text, SafeAreaView, TouchableOpacity, Alert} from 'react-native';
 import {OutlinedTextField} from 'rn-material-ui-textfield';
-import {auth, db} from '../../../../../../firebase';
+import {auth, db} from '../../../../../../firebase/firebase';
 
 const WifiSave = ({navigation}) => {
   const user = auth.currentUser.uid;
