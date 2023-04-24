@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React, {useState, useEffect} from 'react';
 import {formStyles} from './../Styling/FormStyle';
 import alrenoLogo from './../../assets/Alreno-sticker-black.png';

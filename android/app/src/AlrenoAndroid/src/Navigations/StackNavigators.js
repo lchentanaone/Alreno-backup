@@ -53,24 +53,6 @@ const StackNavigators = () => {
         <Stack.Screen name="Edit your Profile" component={EditProfile} />
         <Stack.Screen name="Wi-Fi" component={WifiSave} />
         <Stack.Screen name="Coming Soon" component={UnderContruction} />
-
-        {/* 
-
-
-        <Stack.Screen name="Weight" component={tankWeight} />
-
-      
-       
-
-        <Stack.Screen
-          name="Products"
-          component={Products}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen name="Transaction" component={Transaction} />
-
-        
- */}
       </Stack.Navigator>
     </>
   );
